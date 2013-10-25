@@ -1,0 +1,25 @@
+﻿<Window x:Class="reliability.AddElementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddElementWindow" Height="254" Width="371" ResizeMode="CanMinimize">
+    <Grid>
+        <ComboBox x:Name="CbElement" HorizontalAlignment="Left" Margin="72,14,0,0" VerticalAlignment="Top" Width="219" SelectionChanged="CbElement_SelectionChanged_1" Height="22" >
+        </ComboBox>
+        <ComboBox x:Name="CbType1" HorizontalAlignment="Left" Margin="72,45,0,0" VerticalAlignment="Top" Width="219" SelectionChanged="CbType1_SelectionChanged_1" Height="22" />
+        <ComboBox x:Name="CbType2" HorizontalAlignment="Left" Margin="72,76,0,0" VerticalAlignment="Top" Width="219" Height="22" SelectionChanged="CbType2_SelectionChanged_1"/>
+        <TextBox x:Name="TbIntens1" HorizontalAlignment="Left" Height="23" Margin="100,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" PreviewTextInput="IsDecimal_PreviewTextInput_1" MaxLines="2" MaxLength="25" TabIndex="5"/>
+        <TextBox x:Name="TbIntens2" HorizontalAlignment="Left" Height="23" Margin="205,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" PreviewTextInput="IsDecimal_PreviewTextInput_1" MaxLines="2" MaxLength="25" TabIndex="6"/>
+        <Label Content="Елемент" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="57" Height="26"/>
+        <Label Content="Тип 1" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="57" Height="26"/>
+        <Label Content="Тип 2" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="57" Height="26"/>
+        <Label Content="Інтенсивність&#xA;відмов" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
+        <Button x:Name="BtnAddNewElement" Content="+" HorizontalAlignment="Left" Margin="296,14,0,0" VerticalAlignment="Top" FontStyle="Italic" Height="22" Width="34" FontSize="14" FontWeight="Bold" FontFamily="Arial Black" ToolTip="Додати новий елемент" Click="BtnAddNewListElement_Click_1" TabIndex="1"/>
+        <Button x:Name="BtnAddNewType1" Content="+" HorizontalAlignment="Left" Margin="296,45,0,0" VerticalAlignment="Top" FontStyle="Italic" Height="22" Width="34" FontSize="14" FontWeight="Bold" FontFamily="Arial Black" ToolTip="Додати новий тип1" IsEnabled="False" Click="BtnAddNewType1_Click" TabIndex="2"/>
+        <Button x:Name="BtnAddNewType2" Content="+" HorizontalAlignment="Left" Margin="296,76,0,0" VerticalAlignment="Top" FontStyle="Italic" Height="22" Width="34" FontSize="14" FontWeight="Bold" FontFamily="Arial Black" ToolTip="Додати новий тип2" IsEnabled="False" Click="BtnAddNewType2_Click" TabIndex="3"/>
+        <Button x:Name="BtnAddNewElementToBase"  Margin="0,0,33,10" ToolTip="Додати новий елемент в базу" Click="BtnAddNewElementToBase_Click_1" HorizontalAlignment="Right" Width="66" Height="61" VerticalAlignment="Bottom" TabIndex="7">
+            <StackPanel>
+                <Image Source="imgs/add.png" Stretch="Uniform" Margin="3,0" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
